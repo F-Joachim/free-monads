@@ -1,0 +1,39 @@
+name:                free-monads
+version:             0.1.0.0
+github:              "F-Joachim/free-monads"
+license:             BSD3
+author:              "Joachim Friedrich"
+maintainer:          "49515773+F-Joachim@users.noreply.github.com"
+copyright:           "2025 Joachim Friedrich"
+
+extra-source-files:
+- README.adoc
+
+description:         Please see the README on GitHub at <https://github.com/F-Joachim/free-monads#readme>
+language:            GHC2021
+
+dependencies:
+- base >= 4.7 && < 5
+- free
+- containers
+- mtl
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+executables:
+  free-monads-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N

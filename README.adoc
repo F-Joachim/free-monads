@@ -1,0 +1,31 @@
+= A Haskell Project with Free Monads
+
+This project demonstrates the use of Free Monads in Haskell, providing a simple key-value store as an example.
+
+== Key Features
+
+- **Free Monads**: The project utilizes Free Monads to separate the description of computations from their execution.
+- **Key-Value Store**: A simple in-memory key-value store is implemented as an example use case.
+- **Interpreters**: Multiple interpreters are provided to run the key-value store, including an in-memory version and a logging version.
+
+== Getting Started
+
+To get started with the project, clone the repository and use `stack` to build and run the examples.
+
+[source, bash]
+----
+git clone https://github.com/F-Joachim/free-monads.git
+cd free-monads
+stack build
+stack exec free-monads-exe
+----
+
+=== Using Nix Flake
+If you prefer using Nix, you can use the provided `flake.nix` to set up the environment:
+
+[source, bash]
+----
+nix develop
+stack build
+stack exec free-monads-exe
+----
