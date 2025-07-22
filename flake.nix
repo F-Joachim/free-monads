@@ -18,10 +18,6 @@
           root = ./.;
           modifier = drv: drv.overrideAttrs (old: {
 
-            buildInputs = old.buildInputs ++ (with pkgs; [
-              bashInteractive # Add bashInteractive to avoid "invalid shell option name" in VSCode
-            ]);
-
             nativeBuildInputs = old.nativeBuildInputs ++ (with pkgs; [
               haskell-language-server
               stack
